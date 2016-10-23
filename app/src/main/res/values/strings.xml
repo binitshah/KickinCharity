@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Kickin Charity</string>
     <string name="action_settings">Settings</string>
+
+    <!--Onboarding-->
+    <string name="slide1title">Kickin Charity</string>
+    <string name="slide2title">Why Shoes?</string>
+    <string name="slide3title">The Need</string>
+    <string name="slide4title">How It Works</string>
+
+    <string name="slide1description">We pair old shoes to charities that can bring them to those who need them most.</string>
+    <string name="slide2description">Aditya and I, Binit, built this app because we noticed that in New England, there\'s a coat drive every winter, yet neither of us have ever seen a shoe drive.</string>
+    <string name="slide3description">But there\'s a huge demand for shoes. There\'s a need for winter boots in the colder regions. There\'s a need for regular sneakers by millions in third world countries. There\'s a need for fancy shoes at proms.</string>
+    <string name="slide4description">Charities can request certain types of shoes, while donators can either pick a request to fulfill or allow our algorithms to match their shoes to a charity. Charities are then noticed of the pick up location.</string>
+
 </resources>

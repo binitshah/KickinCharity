@@ -1,52 +1,86 @@
 package com.binitshah.kickincharity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.github.paolorotolo.appintro.AppIntro;
+import com.github.paolorotolo.appintro.AppIntroFragment;
+
+public class MainActivity extends AppIntro {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        // Note here that we DO NOT use setContentView();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        // Add your slide fragments here.
+        // AppIntro will automatically generate the dots indicator and buttons.
+        //addSlide(firstFragment);
+        //addSlide(secondFragment);
+        //addSlide(thirdFragment);
+        //addSlide(fourthFragment);
+
+        // Instead of fragments, you can also use our default slide
+        // Just set a title, description, background and image. AppIntro will do the rest.
+        addSlide(AppIntroFragment.newInstance(
+                getResources().getString(R.string.slide1title),
+                getResources().getString(R.string.slide1description),
+                R.drawable.logo,
+                ContextCompat.getColor(this, R.color.slide1color)));
+
+        addSlide(AppIntroFragment.newInstance(
+                getResources().getString(R.string.slide2title),
+                getResources().getString(R.string.slide2description),
+                R.drawable.logo,
+                ContextCompat.getColor(this, R.color.slide2color)));
+
+        addSlide(AppIntroFragment.newInstance(
+                getResources().getString(R.string.slide3title),
+                getResources().getString(R.string.slide3description),
+                R.drawable.logo,
+                ContextCompat.getColor(this, R.color.slide3color)));
+
+        addSlide(AppIntroFragment.newInstance(
+                getResources().getString(R.string.slide4title),
+                getResources().getString(R.string.slide4description),
+                R.drawable.logo,
+                ContextCompat.getColor(this, R.color.slide4color)));
+
+        // OPTIONAL METHODS
+        // Override bar/separator color.
+        setSeparatorColor(Color.parseColor("#002196F3"));
+
+        // Hide Skip/Done button.
+        showSkipButton(true);
+        setProgressButtonEnabled(true);
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    public void onSkipPressed(Fragment currentFragment) {
+        super.onSkipPressed(currentFragment);
+        // Do something when users tap on Skip button.
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void onDonePressed(Fragment currentFragment) {
+        super.onDonePressed(currentFragment);
+        // Do something when users tap on Done button.
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    @Override
+    public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
+        super.onSlideChanged(oldFragment, newFragment);
+        // Do something when the slide changes.
     }
 }
