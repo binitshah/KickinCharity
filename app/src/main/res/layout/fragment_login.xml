@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slide5color"
+    android:orientation="vertical"
+    tools:context="com.binitshah.kickincharity.LoginFragment"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank you for joining!"
+        android:textSize="30sp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:hint="Enter Username"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:hint="Enter Password"
+        android:textColor="@android:color/white"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charity"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donator"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

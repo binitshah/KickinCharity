@@ -13,4 +13,8 @@
     <string name="slide3description">But there\'s a huge demand for shoes. There\'s a need for winter boots in the colder regions. There\'s a need for regular sneakers by millions in third world countries. There\'s a need for fancy shoes at proms.</string>
     <string name="slide4description">Charities can request certain types of shoes, while donators can either pick a request to fulfill or allow our algorithms to match their shoes to a charity. Charities are then noticed of the pick up location.</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_chairty_maps">ChairtyMapsActivity</string>
+
 </resources>
